@@ -11,6 +11,10 @@ set t_Co=256
 set background=light
 colorscheme PaperColor
 
+" To resize window automatically in split view
+" Alternative is <Ctrl-w>= keystroke
+autocmd VimResized * wincmd =
+
 let mapleader = ','
 
 " Nerdcommentor Plugin
