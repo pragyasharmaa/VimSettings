@@ -1,11 +1,13 @@
 set number relativenumber
-"set number
+
 set hlsearch
+
 set tabstop=4
+set shiftwidth=4
+set expandtab
 set nofixeol
 
 " syntax highlighting
-filetype plugin indent on
 syntax on
 set t_Co=256
 set background=light
@@ -15,9 +17,17 @@ colorscheme PaperColor
 " Alternative is <Ctrl-w>= keystroke
 autocmd VimResized * wincmd =
 
+" Vim Plugins
+filetype plugin indent on
+
 let mapleader = ','
 
-" Nerdcommentor Plugin
 call plug#begin()
+
+" Nerdcommenter
 Plug 'preservim/nerdcommenter'
+
+" Autoclose brackets, quotes
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
